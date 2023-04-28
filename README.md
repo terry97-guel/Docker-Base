@@ -16,9 +16,15 @@ docker build -t ${IMAGE} --build-arg UNAME=${NAME} --build-arg UID=${UID} --buil
 `-t` : 생성할 image의 이름을 입력하는 명령어입니다.
 
 `--build-arg` : Dockerfile에서 사용하는 `ARG` 에 전달할 값에 해당합니다. 
-  - 'IMAGE'      : 생성할 image의 이름
-  - `UID', `GID` : Ubuntu의 `id` 커맨드를 통해 확인할 수 있습니다. 
+  - `IMAGE`      : 생성할 image의 이름
+  - `UID`, `GID` : Ubuntu의 `id` 커맨드를 통해 확인할 수 있습니다. 
   - `NAME`       : 우분투 유저 이름입니다.
+
+스크립트로 쉽게 쓰기 
+```bash
+./make.sh -i nerf -n "taerim"
+```
+
 
 # Container
 
