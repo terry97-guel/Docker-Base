@@ -7,15 +7,18 @@ Base of the DockerFile
 
 Dockerfile이 작성되었으므로 Dockerfile이 있는 폴더에서 다음의 명령어를 실행합니다.
 
-## Example
+## Image생성하기
 
 ```bash
-docker build -t test --build-arg UNAME=${NAME} --build-arg UID=${UID} --build-arg GID=${UID} .
+docker build -t ${IMAGE} --build-arg UNAME=${NAME} --build-arg UID=${UID} --build-arg GID=${UID} .
 ```
 
-`-t` : 생성할 image의 이름입니다.
+`-t` : 생성할 image의 이름을 입력하는 명령어입니다.
 
-`--build-arg` : Dockerfile에서 사용하는 `ARG` 에 전달할 값에 해당합니다. 참고로 `UID` 및 `GID` 는 Ubuntu의 `id` 커맨드를 통해 확인할 수 있습니다. `NAME`은 우분투 유저 이름입니다.
+`--build-arg` : Dockerfile에서 사용하는 `ARG` 에 전달할 값에 해당합니다. 
+  - 'IMAGE'      : 생성할 image의 이름
+  - `UID', `GID` : Ubuntu의 `id` 커맨드를 통해 확인할 수 있습니다. 
+  - `NAME`       : 우분투 유저 이름입니다.
 
 # Container
 
