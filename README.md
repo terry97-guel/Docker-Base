@@ -81,3 +81,16 @@ docker exec -it ${container name} /bin/bash
 ```bash
 docker exec -u 0 -it <MyContainer> bash
 ```
+# sudoer 권한 주기
+**root**로 들어가서
+
+```bash
+sudo vim /etc/sudoers 
+```
+
+아래를 추가한다
+
+```bash
+taerim ALL=(ALL) NOPASSWD: ALL
+```
+
