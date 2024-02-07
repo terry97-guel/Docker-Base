@@ -26,13 +26,12 @@ RUN pip3 --no-cache-dir install --upgrade \
     matplotlib \
     pandas \
     scipy \
-    torch \
     jupyter \
-    torchvision \
-    torchtext \
-    torchsummary \
     slacker \
     tqdm
+
+RUN pip3 --no-cache-dir install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+
 
 ARG UNAME
 ARG UID
