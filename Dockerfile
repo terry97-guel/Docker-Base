@@ -1,5 +1,5 @@
 # Use nvidia/cuda version matches your server
-FROM nvidia/cuda:11.4.1-base-ubuntu20.04
+FROM nvidia/cuda:11.4.3-base-ubuntu20.04
 
 # Install ubuntu apt packages. Do not remove default packages.
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
