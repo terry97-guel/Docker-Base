@@ -1,3 +1,5 @@
+docker pull nvidia/cuda:11.4.3-base-ubuntu20.04
+
 while getopts "i:d:n:" opt; do
   case ${opt} in
     i ) IMAGE=${OPTARG};;
